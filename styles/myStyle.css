@@ -1,0 +1,162 @@
+
+/*
+# - id 
+. - class
+div
+h
+p
+body
+*/
+
+html {
+    font-family: 'Roboto', sans-serif;
+    /* margin: 0px; */
+    height: 100%;
+    width: 100%;
+ }
+ 
+ body 
+ {
+    display:flex;
+    /* margin: 10px; */
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+ }
+
+ .nav-wrapper
+ {
+     padding-left: 0px;
+ }
+
+
+#sidebar 
+/* nav */
+{
+    /* display: flex; */
+    height: 100% !important;
+    width: 64px;
+    /* width: 1000px; */
+    /* width: 225px; */
+
+    display: grid;
+    grid-template-columns: 225px 225px 225px; 
+    overflow: hidden;
+
+    /* width: 450px; */
+    margin: 0px auto;
+
+    transition: width 0.5s;
+    transition-timing-function: ease-out;
+}
+
+#sidebar .options
+{
+    width: 225px;
+    /* height: 1px; */
+}
+
+#sidebar .options .btn-flat
+{
+    width: 225px;
+    /* height: 1px; */
+}
+
+/* #sidebar:hover 
+{
+    width: 282px;
+} */
+
+/* #sidebar .s1:hover 
+{
+    width: 564px;
+}
+
+#sidebar .s2:hover 
+{
+    width: 846px;
+} */
+
+
+/*
+#sidebar:hover 
+{
+    width: 400px;
+}
+
+
+#sidebar .options
+{
+    width: 200px;
+    height: 1px;
+}
+*/
+
+#sidebar i
+{
+    /* color: rgb(128, 128, 128); */
+    font-size: 32px;
+    margin-right: 16px;
+
+    /* transition: color 0.5s; */
+    /* transition-timing-function: ease-out; */
+} 
+
+/* #sidebar i:hover
+{
+    color: rgb(255, 255, 255);
+}  */
+
+#sidebar a
+{
+    color: rgb(128, 128, 128);
+
+    transition: color 0.5s;
+    transition-timing-function: ease-out;
+} 
+
+#sidebar a:hover
+{
+    color: rgb(255, 255, 255);
+} 
+
+/* #sidebar #option0 */
+ /* { */
+     /* display: flex; */
+     /* background-color: red; */
+     /* height: 100%; */
+     /* width: 225px; */
+     /* position: relative; */
+ /* } */
+
+
+ /* #sidebar #option0 #option1 */
+ /* { */
+    /* height: 100%; */
+    /* width: 200px; */
+    /* position: absolute; */
+    /* left: 200px; */
+
+    /* Top: 0px; */
+    /* Bottom: 50px; */
+ /* } */
+
+
+
+ .content
+ {
+    /* background-color: #a3a3a3; */
+    padding: 50px;
+    height: 100%;
+    width: 100%;
+ }
+
+
+/* .hidden */
+/* #subOptions */
+/* { */
+    /* display: none; */
+    /* height: 0px; */
+    /* width: 0px; */
+    /* overflow: hidden; */
+/* } */

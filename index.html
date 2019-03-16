@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>htmlSideBar</title>
+
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+        <link rel="stylesheet" href="./styles/myStyle.css">
+        
+
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="./materialize/css/materialize.min.css"  media="screen,projection"/>
+        
+        <!--https://google.github.io/material-design-icons/-->
+        <!-- https://material.io/tools/icons/ -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- http://materialdesignicons.com/ -->
+        <link type="text/css" rel="stylesheet" href="https://cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css"  media="screen,projection"/>
+
+        <!-- get the required files from 3rd party sources -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+        
+    <!--ScriptImports-->
+        <script>
+            $(document).ready(function()
+            {
+                $('.subOptions').each(function(index,value)
+                {
+                    var so = '#' + $(this).attr('id');
+                    console.log(so + ".hide()")
+                    $(so).hide();
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function()
+            {
+                $(".options").find("a").hover(function()
+                {
+
+                    $('.subOptions').each(function(index,value)
+                    {
+                        var so = '#' + $(this).attr('id');
+                        console.log(so + ".hide()")
+                        $(so).hide();
+                    });
+
+                    
+                    var so = '#sub-' + $(this).attr('id');
+                    //console.log(so);
+                    console.log(so + ".show()")
+                    $(so).show();
+                    
+
+                    $("#sidebar").width(846);
+                }, 
+                function()
+                {
+                    //$(this).css("background-color", "pink");
+                    console.log("No");
+                    //$("#sidebar").width(64);
+                    //$('div#option1').html("");
+                }
+                );
+
+                $("#sidebar").hover(function()
+                {
+                    $("#sidebar").width(225);
+                }, 
+                function()
+                {
+                    $("#sidebar").width(64);
+                }
+                );
+            });
+        </script>
+    </head>
+    <body>
+    
+    <!-- <h1>Hello World!</h1>
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>. -->
+
+    <nav id="sidebar" class="grey">
+        <div id="OptionSet0" class="options">
+            <a id="option0" class="waves-effect waves-light btn-flat"><i class="mdi mdi-folder left"></i>option0</a>
+            <a id="option1" class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option1
+                <!-- <div id="subOptions" >
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-folder left"></i>option1-A</a>
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option1-B</a>
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option1-C</a>
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option1-D</a>
+                    <a class="waves-effect waves-light btn-flat disabled"><i class="mdi mdi-file left"></i>option1-E</a>
+                </div> -->
+            </a>
+            <a id="option2" class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option2
+                <!-- <div id="subOptions" class="hidden">
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-folder left"></i>option2-A</a>
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option2-B</a>
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option2-C</a>
+                </div> -->
+            </a>
+            <a id="option3" class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option3
+                <!-- <div id="subOptions" class="hidden">
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-folder left"></i>option3-A</a>
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option3-B</a>
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option3-C</a>
+                </div> -->
+            </a>
+            <a class="waves-effect waves-light btn-flat disabled"><i class="mdi mdi-file left"></i>disabled</a>
+        </div>
+        <!-- <div id="OptionSet1" class="options"> -->
+        <div id="sub-option0" class="subOptions">
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-folder left"></i>option0-A</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option0-B</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option0-C</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option0-D</a>
+            <a class="waves-effect waves-light btn-flat disabled"><i class="mdi mdi-file left"></i>option0-E</a>
+        </div>
+        <div id="sub-option1" class="subOptions">
+                <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-folder left"></i>option1-A</a>
+                <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option1-B</a>
+                <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option1-C</a>
+        </div>
+
+        <div id="sub-option2" class="subOptions">
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-folder left"></i>option2-A</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option2-B</a>
+        </div>
+
+        <div id="sub-option3" class="subOptions">
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-folder left"></i>option3-A</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option3-B</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option3-C</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option3-D</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option3-E</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option3-F</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option3-G</a>
+        </div>
+        <!-- </div> -->
+    </nav>
+
+    <!-- <nav id="sidebar">
+        <div id="option0" class="options">
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-folder left"></i>option0
+                <div id="option1" class="options">
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-folder left"></i>option0</a>
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option1</a>
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option2</a>
+                    <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option3</a>
+                    <a class="waves-effect waves-light btn-flat disabled"><i class="mdi mdi-file left"></i>option4</a>
+                </div>
+            </a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option1</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option2</a>
+            <a class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option3</a>
+            <a class="waves-effect waves-light btn-flat disabled"><i class="mdi mdi-file left"></i>option4</a>
+        </div>
+    </nav> -->
+
+    <div class = "content z-depth-5">
+        <div class="red"> text
+            <div class="blue">
+            </div>
+        </div>
+    </div>
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+        <!-- <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script> -->
+
+        
+    </body>
+</html>
