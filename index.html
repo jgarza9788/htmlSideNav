@@ -40,6 +40,16 @@
         <script>
             $(document).ready(function()
             {
+                $("#sidebar").hover(function()
+                {
+                    $("#sidebar").width(225);
+                }, 
+                function()
+                {
+                    $("#sidebar").width(64);
+                }
+                );
+
                 $(".options").find("a").hover(function()
                 {
 
@@ -63,20 +73,12 @@
                 {
                     //$(this).css("background-color", "pink");
                     console.log("No");
+                    //$("#sidebar").width(225);
                     //$("#sidebar").width(64);
                     //$('div#option1').html("");
                 }
                 );
 
-                $("#sidebar").hover(function()
-                {
-                    $("#sidebar").width(225);
-                }, 
-                function()
-                {
-                    $("#sidebar").width(64);
-                }
-                );
             });
         </script>
     </head>
@@ -87,7 +89,7 @@
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>. -->
 
-    <nav id="sidebar" class="grey">
+    <nav id="sidebar" class="z-depth-1 grey darken-3">
         <div id="OptionSet0" class="options">
             <a id="option0" class="waves-effect waves-light btn-flat"><i class="mdi mdi-folder left"></i>option0</a>
             <a id="option1" class="waves-effect waves-light btn-flat"><i class="mdi mdi-file left"></i>option1
@@ -164,11 +166,8 @@
         </div>
     </nav> -->
 
-    <div class = "content z-depth-5">
-        <div class="red"> text
-            <div class="blue">
-            </div>
-        </div>
+    <div class = "content">
+        
     </div>
 
         <!--JavaScript at end of body for optimized loading-->

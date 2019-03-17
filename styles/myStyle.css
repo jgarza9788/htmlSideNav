@@ -48,6 +48,8 @@ html {
 
     transition: width 0.5s;
     transition-timing-function: ease-out;
+
+    
 }
 
 #sidebar .options
@@ -107,9 +109,15 @@ html {
     color: rgb(255, 255, 255);
 }  */
 
+/* .active:hover
+{
+    color: rgb(255, 255, 255);
+}   */
+
+
 #sidebar a
 {
-    color: rgb(128, 128, 128);
+    color: rgb(197, 197, 197);
 
     transition: color 0.5s;
     transition-timing-function: ease-out;
@@ -146,6 +154,7 @@ html {
  .content
  {
     /* background-color: #a3a3a3; */
+    box-shadow: 0px 0px 50px ;
     padding: 50px;
     height: 100%;
     width: 100%;
