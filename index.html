@@ -40,6 +40,7 @@
         <script>
             $(document).ready(function()
             {
+                /*
                 $("#sidebar").hover(function()
                 {
                     $("#sidebar").width(225);
@@ -49,6 +50,8 @@
                     $("#sidebar").width(64);
                 }
                 );
+                */
+
 
                 $(".options").find("a").hover(function()
                 {
@@ -72,10 +75,20 @@
                 function()
                 {
                     //$(this).css("background-color", "pink");
-                    console.log("No");
-                    //$("#sidebar").width(225);
+                    //console.log("No");
+                    $("#sidebar").width(846);
                     //$("#sidebar").width(64);
                     //$('div#option1').html("");
+
+                    $("#sidebar").hover(function()
+                    {
+                        $("#sidebar").width(225);
+                    }, 
+                    function()
+                    {
+                        $("#sidebar").width(64);
+                    }
+                    );
                 }
                 );
 
